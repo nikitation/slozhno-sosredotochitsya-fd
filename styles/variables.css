@@ -2,3 +2,81 @@
   Переменные для вашего проекта
   и их переопределение под различные устройства
 */
+:root {
+  --page-bg-image: url("../images/cover-image-dark.png");
+  --page-bg-color: #000028;
+  --title-decor-color: #000028;
+  --accent-color: #FF0070;
+  --hero-title-color: #DB00FF;
+  --text-color: #F1B2CE;
+  --section-title-color: #FF0070;
+  --selection-color: #FF0070;
+  --selection-color-40: #FF007066;
+  --ornament-color: #FF0070;
+
+  --font-family: "IBM Plex Mono", Arial, sans-serif;
+
+  --decor-offset: 10px;
+
+  --base-font-size: 18px;
+
+  --page-min-height: 668px;
+  --page-gap: 40px;
+
+  --hero-title-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  --header-left-padding: 10px;
+  --header-right-padding: 10px;
+
+  --main-inline-padding: 10px;
+  --main-gap: 50px;
+  --topics-gap: 20px;
+  --topic-gap: 10px;
+  --section-content-base-gap: 20px;
+  --section-content-alternate-gap: 20px;
+  --section-gallery-gap: 10px;
+  --gallery-gap: 10px;
+  --header-description-width: 355px;
+  --theme-menu-margin-top: 20px;
+  --header-description-margin-bottom: 26px;
+  --section-title-alternate-width: 100%;
+}
+
+
+@media (width >= 768px) {
+  :root {
+    --decor-offset: 20px;
+
+    --page-min-height: 1024px;
+    --page-gap: 60px;
+
+    --header-right-padding: 20px;
+    --header-left-padding: 0;
+    --hero-title-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+    --theme-menu-margin-top: 135px;
+    --header-description-width: 364px;
+    --header-description-margin-bottom: 140px;
+
+    --main-inline-padding: 20px;
+    --main-gap: 80px;
+
+    --section-title-alternate-width: 236px;
+
+    --section-gallery-gap: 20px;
+    --gallery-gap: 20px;
+  }
+}
+
+@media (width >= 1024px) {
+  :root {
+    --page-min-height: 768px;
+
+    --theme-menu-margin-top: 17px;
+
+    --header-description-width: 491px;
+    --header-description-margin-bottom: 86px;
+
+    --section-title-alternate-width: 315px;
+
+    --section-content-base-gap: 10px;
+  }
+}
