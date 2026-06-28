@@ -1,7 +1,5 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 html {
-  /* без указания данного значения в chrome заголовки no focus и focus
-   * не совпадают с макетом. при этом в яндекс и fire-fox все норм */
   font-size: 16px;
 }
 
@@ -145,14 +143,13 @@ html {
   line-height: 0.83;
 } 
 
-
 .header__description {
   font-family: var(--font-family);
   font-weight: 700;
   white-space: pre-line;
   margin-bottom: var(--header-description-margin-bottom);
 
-  width: var(--header-description-width);
+  max-width: var(--header-description-width);
 
   justify-self: end;
 } 
@@ -169,13 +166,15 @@ html {
   gap: var(--main-gap);
 } 
 
-.main__section--content-base {
+.section-content {
   display: grid;
+}
+
+.section-content-base {
   gap: var(--section-content-base-gap);
 } 
 
-.main__section--content-alternate {
-  display: grid;
+.section-content-alternate {
   gap: var(--section-content-alternate-gap);
 } 
 
@@ -201,7 +200,7 @@ html {
 } 
 
 .section-title-alternate {
-  width: var(--section-title-alternate-width);
+  max-width: var(--section-title-alternate-width);
 } 
 
 .topics {
@@ -230,7 +229,7 @@ html {
   color: var(--text-color);
 } 
 
-.main__section--gallery {
+.section-gallery {
   display: grid;
   gap: var(--section-gallery-gap);
 } 
@@ -242,7 +241,7 @@ html {
 
 .gallery__image {
   height: 100%;
-  max-width: 100%;
+  width: 100%;
   object-fit: cover;
 } 
 
@@ -262,7 +261,7 @@ html {
 } 
 
 @media (width >= 768px) {
-  .main__section--content {
+  .section-content-base {
     grid-template-columns: 0.5fr 1fr;
   }
 
